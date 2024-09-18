@@ -1,0 +1,13 @@
+mixin review-card(data)
+  .review-card
+    .review-card__header
+      img(src="./assets/images/stars.png" alt="rate" width="116" height="16")
+    .review-card__content
+      span!= data.text
+
+      button(type="button").review-card__btn
+        span Читать полностью
+    .review-card__footer
+      img(src=`./assets/images/${data.user.avatar}` alt="avatar" width="60" height="60")
+      span.review-card__title!= data.user.name
+      span.review-card__note!= data.user.role

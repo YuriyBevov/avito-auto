@@ -1,0 +1,12 @@
+.main-btn {
+  @extend %flex-center;
+  @extend %btn-reset;
+  padding: 16px 28px 14px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  width: fit-content;
+  background-color: var(--primary);
+  color: var(--white);
+  cursor: pointer;
+}

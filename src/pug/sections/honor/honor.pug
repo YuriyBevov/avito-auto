@@ -1,0 +1,37 @@
+extends ../../layouts/base-section/base-section
+
+block variables
+  -
+    sectionTitle = "Что получают победители"
+    sectionDesc = '';
+    sectionCls = 'honor';
+    sectionID = 'honor';
+    sectionCollapsed = false;
+
+block content
+  .honor__grid
+    .honor__grid-item
+      img(src="./assets/images/honor-bg.png" alt="logo" width="690" height="600")
+    .honor__grid-item
+      ul.honor__list
+        li
+          img(src="./assets/images/logo-circle-sm.png" alt="logo" width="60" height="60")
+          span Статусное звание Автодилер года
+        li
+          img(src="./assets/images/logo-circle-sm.png" alt="logo" width="60" height="60")
+          span Фирменный пак Автодилер года: кубики, сертификаты, стикеры в дилерский центр
+        li
+          img(src="./assets/images/logo-circle-sm.png" alt="logo" width="60" height="60")
+          span Масштабные PR-охваты победителей в отрасли и на потенциальных покупателей
+        li
+          img(src="./assets/images/logo-circle-sm.png" alt="logo" width="60" height="60")
+          span Новый заметный бейдж в личном кабинете победителей, который повысит доверие вашей аудитории
+        li
+          img(src="./assets/images/logo-circle-sm.png" alt="logo" width="60" height="60")
+          span Промо-пакет продвижения на Авито*
+        li
+          img(src="./assets/images/logo-circle-sm.png" alt="logo" width="60" height="60")
+          span Подарки от Автохаб*
+
+      small *Только для победителей номинаций Авито и Автохаб
+

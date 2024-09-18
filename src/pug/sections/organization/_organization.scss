@@ -1,0 +1,32 @@
+.organization {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+
+    @include media-down($laptop-width) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    @extend %flex-column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    color: var(--white);
+    background-image: url("../assets/images/section-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &-logo {
+      max-width: 320px;
+      height: auto;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

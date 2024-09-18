@@ -1,0 +1,26 @@
+.features {
+  color: var(--white);
+  background-image: url("../assets/images/section-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .base-title {
+    color: var(--white);
+  }
+
+  &__list {
+    // @extend %list-reset;
+    margin: 0;
+    padding-left: 30px;
+  }
+
+  &__list-item {
+    font-size: clamp(16px, 2.8vw, 32px);
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}

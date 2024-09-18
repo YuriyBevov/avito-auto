@@ -1,0 +1,41 @@
+.subscribe {
+  padding: clamp(30px, 5vw, 100px) 0;
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 60px;
+
+    @include media-down($laptop-width) {
+      grid-template-columns: 1fr;
+    }
+
+    &-item {
+      @extend %flex-column;
+      gap: 24px;
+
+      container: subscribe-item / inline-size;
+    }
+  }
+
+  &__link {
+    @extend %flex-center;
+    gap: 20px;
+    padding: 24px;
+    font-size: 28px;
+    line-height: 1;
+    border-radius: 50px;
+    background-color: #00aaff;
+    color: var(--white);
+    text-align: center;
+
+    @container subscribe-item (max-width: 640px) {
+      flex-direction: column;
+    }
+
+    img {
+      width: 40px;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}

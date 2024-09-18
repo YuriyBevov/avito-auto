@@ -6,4 +6,29 @@
 @import './extends';
 @import './global';
 
+@import '../pug/components/ui/main-accordeon/main-accordeon';
+@import '../pug/components/ui/main-btn/main-btn';
+@import '../pug/components/ui/cards/staff-card/staff-card';
+@import '../pug/components/ui/cards/review-card/review-card';
+
+@import '../pug/components/header/header';
+@import '../pug/components/nav/nav';
+
+@import '../pug/layouts/base-section/base-section';
+
+@import '../pug/sections/hero/hero';
+@import '../pug/sections/features/features';
+@import '../pug/sections/nominations/nominations';
+@import '../pug/sections/honor/honor';
+@import '../pug/sections/about/about';
+@import '../pug/sections/winners/winners';
+@import '../pug/sections/history/history';
+@import '../pug/sections/reviews/reviews';
+@import '../pug/sections/organization/organization';
+@import '../pug/sections/faq/faq';
+@import '../pug/sections/contacts/contacts';
+@import '../pug/sections/subscribe/subscribe';
+
+@import '../pug/components/footer/footer';
+
 @import '../pug/modals/modal';

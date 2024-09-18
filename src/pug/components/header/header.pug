@@ -1,11 +1,7 @@
 header.header
-  .container
-    img(src="./assets/images/logo.svg" alt="logo" width="120" height="60")
-    svg(width="40" height="40")
-      use(xlink:href="./assets/sprite.svg#icon-feature-2")
-    svg(width="20" height="20")
-        use(xlink:href="./assets/sprite.svg#icon-close")
-    svg(width="40" height="40")
-      use(xlink:href="./assets/sprite.svg#icon-check")
-    svg(width="40" height="40")
-      use(xlink:href="./assets/sprite.svg#icon-arrow-small")
+  .container.header__container
+    a(href="index.html" aria-label="Обновить страницу").logo.header__logo
+      img(src="./assets/images/logo.svg" alt="logo" width="120" height="60")
+
+    include ../nav/nav
+

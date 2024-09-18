@@ -1,0 +1,17 @@
+mixin staff-card(data)
+  .staff-card
+    .staff-card__header
+      img(src=`./assets/images/${data.user.img}` alt="photo" width="500" height="320")
+    .staff-card__content
+      img(src=`./assets/images/${data.logo}` alt="logo" width="160" height="40")
+
+      span.staff-card__title!= data.user.name
+      small.staff-card__role!= data.user.role
+
+      if data.user.phone || data.user.mail
+      .staff-card__footer
+        if data.user.phones
+          each phone in data.user.phones
+            a(href=`tel:${phone}`).staff-card__phone!= phone
+        if data.user.mail
+          a(href=`mailto:${data.user.mail}`)!= data.user.mail

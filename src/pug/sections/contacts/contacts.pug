@@ -1,0 +1,38 @@
+extends ../../layouts/base-section/base-section
+
+block variables
+  -
+    sectionTitle = "Контакты"
+    sectionDesc = '';
+    sectionCls = 'contacts';
+    sectionID = 'contacts';
+    sectionCollapsed = false;
+
+block content
+  include ../../components/ui/cards/staff-card/staff-card
+  .contacts__grid
+    .contacts__grid-item
+      +staff-card({
+        user: {
+          img: 'contacts.png',
+          name: 'Татьяна Малыгина',
+          role: 'Куратор премии',
+          mail: 'bestdealer@autostat.ru'
+        },
+        logo: 'auto-dark-logo.svg'
+      })
+    .contacts__grid-item
+      +staff-card({
+        user: {
+          img: 'contacts.png',
+          name: 'Татьяна Малыгина',
+          role: 'Возможности для партнеров',
+          mail: 'ash@autostat.ru',
+          phones: [
+            '+7 (499) 685-01-51 (24)',
+            '+7 (903) 333-02-34 (моб.)'
+          ]
+        },
+        logo: 'auto-dark-logo.svg'
+      })
+

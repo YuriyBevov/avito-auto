@@ -1,0 +1,24 @@
+block variables
+  - sectionTitle = '';
+  - sectionDesc = '';
+  - sectionCls = '';
+  - sectionID = '';
+  - sectionCollapsed = false;
+
+section.base-section(class= sectionCls id= sectionID)
+  .container
+    if sectionTitle || sectionDesc
+      .base-section__header
+        if sectionTitle
+          .base-section__header-top
+            h2.base-title= sectionTitle
+            if sectionCollapsed
+              button(type="button" aria-label="Развернуть") +
+        if sectionDesc
+          .base-section__header-bottom
+            p.base-subtitle= sectionDesc
+    .base-section__content
+      block content
+
+
+

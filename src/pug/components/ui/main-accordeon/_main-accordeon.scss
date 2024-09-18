@@ -1,0 +1,107 @@
+.main-accordeon {
+  @extend %flex-column;
+
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 40px;
+
+  &__item {
+    font-size: clamp(16px, 3vw, 24px);
+    font-weight: 700;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    overflow: hidden;
+
+    &-body {
+      font-size: clamp(16px, 2.6vw, 18px);
+      font-style: inherit;
+      font-weight: var(--fw-r);
+      padding: 24px;
+      padding-top: 0;
+      background-color: transparent;
+      max-height: 400px;
+      overflow: hidden;
+      overflow-y: auto;
+
+      &-content {
+        animation: fadeIn 0.3s ease-in forwards;
+
+        & > *:last-child {
+          margin-bottom: 0;
+        }
+
+        a {
+          color: var(--primary);
+        }
+
+        a:not(span a) {
+          display: block;
+          font-size: 16px;
+          text-decoration: underline;
+          margin: 16px 0 8px;
+        }
+
+        small {
+          display: block;
+          font-size: 16px;
+          font-style: italic;
+        }
+      }
+    }
+
+    &-header {
+      position: relative;
+      line-height: 1;
+      padding: 24px;
+      padding-right: 70px;
+      background-color: transparent;
+      cursor: pointer;
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%) rotate(225deg);
+
+        @include media-up($mobile-width) {
+          right: 30px;
+        }
+
+        width: 20px;
+        height: 2px;
+        content: '';
+        background-color: var(--primary);
+        transition: transform 0.3s linear;
+      }
+
+      &.collapsed::before {
+        transform: translateY(-50%) rotate(90deg);
+      }
+
+      &.collapsed::after {
+        transform: translateY(-50%) rotate(90deg);
+      }
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        right: 29px;
+        transform: translateY(-50%) rotate(45deg);
+
+        @include media-up($mobile-width) {
+          right: 39px;
+        }
+
+        width: 2px;
+        height: 20px;
+        content: '';
+        background-color: var(--primary);
+        transition: transform 0.3s linear;
+      }
+
+      &.collapsed + .main-accordeon__item-body {
+        display: none;
+      }
+    }
+  }
+}

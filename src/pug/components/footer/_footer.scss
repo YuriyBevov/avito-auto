@@ -1,0 +1,39 @@
+.footer {
+  padding: clamp(30px, 5vw, 100px) 0;
+  background-color: var(--primary);
+
+  &__logo {
+    max-width: 300px;
+  }
+
+  &__section {
+    @extend %flex-align;
+    justify-content: space-between;
+    gap: 20px 60px;
+    flex-wrap: wrap;
+
+    &:first-child {
+      padding-bottom: 40px;
+    }
+
+    &:last-child {
+      padding-top: 40px;
+      border-top: 1px solid var(--white);
+    }
+
+    &-side {
+      @extend %flex-column;
+      gap: 8px;
+
+      a {
+        max-width: 200px;
+      }
+    }
+  }
+
+  &__copyrights,
+  &__privacy {
+    font-size: 14px;
+    color: var(--white);
+  }
+}
