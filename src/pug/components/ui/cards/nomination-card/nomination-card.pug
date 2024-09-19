@@ -1,0 +1,15 @@
+include ../../badge/badge
+mixin nomination-card(data)
+  .nomination-card
+    .nomination-card__header
+      .nomination-card__header-top
+        img(src=`./assets/images/${data.logo}` alt="logo" width="160" height="40")
+        button(type="button" aria-label="Развернуть").nomination-card-expander
+      .nomination-card__header-bottom
+        span.nomination-card__title!= data.title
+    .nomination-card__content
+      +badge(data.badge)
+
+      != data.content
+
+

@@ -3,9 +3,9 @@ mixin review-card(data)
     .review-card__header
       img(src="./assets/images/stars.png" alt="rate" width="116" height="16")
     .review-card__content
-      span!= data.text
+      span.review-card__content-text!= data.text
 
-      button(type="button").review-card__btn
+      button(type="button" data-modal-opener="review-modal").review-card__btn
         span Читать полностью
     .review-card__footer
       img(src=`./assets/images/${data.user.avatar}` alt="avatar" width="60" height="60")

@@ -1,4 +1,45 @@
 .base-section {
   padding: clamp(30px, 5vw, 100px) 0;
 
+  &__header-top:has(.base-section__expand-btn) {
+    @extend %flex-align;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+
+    .base-title {
+      margin-bottom: 0;
+      height: clamp(28px, 3.8vw, 48px);
+    }
+
+    .base-section__expand-btn {
+      @extend %btn-reset;
+      @extend %flex-center;
+      @extend %hover-opacity;
+      width: 40px;
+      height: 40px;
+
+      background-image: url("../assets/images/icon-plus.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+
+      transition: transform var(--base-transition);
+    }
+  }
+
+  &:has(.base-section__expand-btn) &__content {
+    display: none;
+  }
+
+  &.expanded &__content {
+    display: block;
+
+    padding-top: clamp(30px, 3.6vw, 60px);
+    animation: fadeIn var(-base-transition);
+  }
+
+  &.expanded .base-section__expand-btn {
+    transform: rotate(45deg);
+  }
 }

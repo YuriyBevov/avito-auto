@@ -1,0 +1,25 @@
+.about {
+  &__grid {
+    display: grid;
+    grid-template-columns: auto 40dvw;
+    gap: 40px;
+    align-items: center;
+    margin-right: calc(-1* var(--container-offset));
+
+    @media(max-width: $laptop-width) {
+      grid-template-columns: 1fr;
+      margin-right: initial;
+    }
+
+    &-item {
+      p {
+        font-size: 24px;
+      }
+      &:last-child {
+        @media(max-width: $laptop-width) {
+          display: none;
+        }
+      }
+    }
+  }
+}

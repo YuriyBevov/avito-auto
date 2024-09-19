@@ -13,7 +13,7 @@ section.base-section(class= sectionCls id= sectionID)
           .base-section__header-top
             h2.base-title= sectionTitle
             if sectionCollapsed
-              button(type="button" aria-label="Развернуть") +
+              button(type="button" aria-label="Развернуть").base-section__expand-btn
         if sectionDesc
           .base-section__header-bottom
             p.base-subtitle= sectionDesc
