@@ -1694,7 +1694,7 @@ picture {
   background-image: url("../assets/images/nomination-card-bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   padding: clamp(8px, 2.2vw, 20px);
   height: 100%;
 }
