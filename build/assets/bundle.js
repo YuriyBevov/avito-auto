@@ -5617,15 +5617,39 @@
 	  });
 	}
 
-	const openers = document.querySelectorAll('.review-card__btn');
-	if (openers.length) {
+	const openers$2 = document.querySelectorAll('.review-card__btn');
+	if (openers$2.length) {
 	  const reviewModalBody = document.querySelector('.review-modal .modal-content');
-	  openers.forEach(opener => {
+	  openers$2.forEach(opener => {
 	    opener.addEventListener('click', evt => {
 	      const target = evt.currentTarget;
 	      const clone = target.closest('.review-card').cloneNode(true);
 	      clone.querySelector('.review-card__btn').remove();
 	      reviewModalBody.innerHTML = clone.outerHTML;
+	    });
+	  });
+	}
+
+	const openers$1 = document.querySelectorAll('.history__tab-opener');
+	if (openers$1.length) {
+	  const modal = document.querySelector('.history-modal .modal-content');
+	  openers$1.forEach(opener => {
+	    opener.addEventListener('click', evt => {
+	      const target = evt.currentTarget;
+	      const clone = target.nextElementSibling.cloneNode(true);
+	      modal.innerHTML = clone.outerHTML;
+	    });
+	  });
+	}
+
+	const openers = document.querySelectorAll('.winners__item-title');
+	if (openers.length) {
+	  const modal = document.querySelector('.winners-modal .modal-content');
+	  openers.forEach(opener => {
+	    opener.addEventListener('click', evt => {
+	      const target = evt.currentTarget;
+	      const clone = target.nextElementSibling.cloneNode(true);
+	      modal.innerHTML = clone.outerHTML;
 	    });
 	  });
 	}

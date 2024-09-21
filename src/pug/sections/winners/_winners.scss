@@ -1,0 +1,80 @@
+.winners {
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+
+    @media(max-width: 1440px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    &-title {
+      position: relative;
+      @extend %flex-align;
+      font-size: clamp(18px, 2.4vw, 32px);
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 0 80px;
+      margin-bottom: 15px;
+      color: var(--secondary);
+      min-height: 60px;
+      cursor: pointer;
+      @extend %hover-opacity;
+
+      @media(max-width: 534px) {
+        padding-left: 0;
+        padding-right: 50px;
+        min-height: initial;
+      }
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        content: '';
+        width: 60px;
+        height: 60px;
+        background-image: url("../assets/images/icon-plus.svg");
+        background-repeat: no-repeat;
+        background-size: 35px;
+        background-position: center;
+
+        @media(max-width: 534px) {
+          width: 40px;
+          height: 40px;
+
+          background-size: 20px;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 60px;
+        height: 60px;
+        content: '';
+        background-image: url("../assets/images/history-auto-logo.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @media(max-width: 534px) {
+          display: none;
+        }
+      }
+    }
+
+    &-content {
+      display: none;
+      padding: 40px 0;
+    }
+  }
+}
+.winners-modal .winners__item-content {
+  display: block;
+}

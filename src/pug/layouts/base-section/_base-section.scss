@@ -1,6 +1,19 @@
 .base-section {
   padding: clamp(30px, 5vw, 100px) 0;
 
+  &__header {
+    .base-title {
+      margin-bottom: 0;
+    }
+
+    margin-bottom: clamp(30px, 3.6vw, 60px);
+
+    .base-subtitle {
+      margin: 0;
+      margin-top: 30px;
+    }
+  }
+
   &__header-top:has(.base-section__expand-btn) {
     @extend %flex-align;
     justify-content: space-between;

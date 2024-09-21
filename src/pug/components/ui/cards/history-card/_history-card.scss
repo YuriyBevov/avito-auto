@@ -1,0 +1,77 @@
+.history-card {
+  &__header {
+    @extend %flex-column;
+    gap: clamp(30px, 3.2vw, 50px);
+
+    &-title {
+      display: inline-block;
+      text-align: center;
+      margin-bottom: 0;
+      font-size: clamp(18px, 3vw, 48px);
+      padding: clamp(20px, 3vw, 50px);
+    }
+  }
+
+  &__content {
+    @extend %flex-column;
+    gap: 20px;
+    padding: clamp(20px, 3vw, 50px);
+
+    &-title {
+      position: relative;
+      @extend %flex-align;
+      font-size: clamp(18px, 2.4vw, 32px);
+      text-transform: uppercase;
+      font-weight: 700;
+      padding-left: 80px;
+      margin-bottom: 15px;
+      color: var(--secondary);
+      min-height: 60px;
+
+      @media(max-width: 534px) {
+        padding-left: 0;
+        min-height: initial;
+      }
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 60px;
+        height: 60px;
+        content: '';
+        background-image: url("../assets/images/history-auto-logo.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @media(max-width: 534px) {
+          display: none;
+        }
+      }
+    }
+
+    &-subtitle {
+      display: inline-block;
+      font-size: clamp(16px, 2.6vw, 24px);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &-text {
+      @extend %flex-column;
+      gap: 10px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+  }
+
+  &:has(.history-card__footer) .histor-card__content {
+    padding-bottom: 0;
+  }
+
+  &__footer {
+    padding: clamp(20px, 3vw, 50px);
+    padding-top: 0;
+  }
+}
