@@ -12,6 +12,6 @@ mixin staff-card(data)
       .staff-card__footer
         if data.user.phones
           each phone in data.user.phones
-            a(href=`tel:${phone}`).staff-card__phone!= phone
+            a(href=`tel:${phone.link}`).staff-card__phone!= phone.html
         if data.user.mail
           a(href=`mailto:${data.user.mail}`)!= data.user.mail

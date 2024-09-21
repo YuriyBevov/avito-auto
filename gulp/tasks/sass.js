@@ -31,14 +31,14 @@ export const styles = (done) => {
         })
       )
     )
-    .pipe(
-      gulpIf(
-        config.isProd,
-        cleanCss({
-          level: 2,
-        })
-      )
-    )
+    // .pipe(
+    //   gulpIf(
+    //     config.isProd,
+    //     cleanCss({
+    //       level: 2,
+    //     })
+    //   )
+    // )
     .pipe(gulpIf(config.isProd, rename({ suffix: '.min' })))
     .pipe(dest(config.styles.dest, { sourcemaps: '.' }))
 
