@@ -2153,7 +2153,7 @@ picture {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
-  min-height: 768px;
+  min-height: 960px;
 }
 @media (max-width: 768px) {
   .hero {
@@ -2268,6 +2268,7 @@ picture {
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   gap: clamp(20px, 2.4vw, 30px);
+  margin-bottom: 40px;
 }
 
 .honor__grid {

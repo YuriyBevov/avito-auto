@@ -3,5 +3,6 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: clamp(20px, 2.4vw, 30px);
+    margin-bottom: 40px;
   }
 }
