@@ -2727,6 +2727,9 @@ picture {
   right: 0;
   left: calc(100% - 50px);
 }
+.modal:has(.history-card) .modal-content {
+  margin-top: 20px;
+}
 .modal-content {
   background-color: var(--white);
   padding: clamp(var(--gap-s), 3vw, var(--gap-xl));

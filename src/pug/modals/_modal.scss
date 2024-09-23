@@ -35,6 +35,10 @@
       right: 0;
       left: calc(100% - 50px);
     }
+
+    .modal-content {
+      margin-top: 20px;
+    }
   }
 
   &-content {
