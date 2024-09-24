@@ -2113,6 +2113,7 @@ picture {
 .offer-form input[type=submit],
 .offer-form button[type=submit] {
   width: 100%;
+  text-wrap: balance;
 }
 .offer-form form {
   gap: 20px;
