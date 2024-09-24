@@ -1815,7 +1815,7 @@ picture {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 4/3;
+  aspect-ratio: 1/1;
 }
 .staff-card__content {
   padding: 20px 0;
