@@ -6,7 +6,10 @@ mixin nomination-card(data)
         img(src=`./assets/images/${data.logo}` alt="logo" width="160" height="40")
         button(type="button" aria-label="Развернуть").nomination-card-expander
       .nomination-card__header-bottom
-        span.nomination-card__title!= data.title
+        span.nomination-card__title
+          != data.title
+          if data.titleLogo
+            img(src=`./assets/images/${data.titleLogo}` alt="" width="120" height="60")
     .nomination-card__content
       +badge(data.badge)
 

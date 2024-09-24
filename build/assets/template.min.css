@@ -1516,7 +1516,7 @@ p {
   border-radius: var(--scrollbar-thumb-border-radius);
 }
 
-.nav__list, .flex-row {
+.nav__list, .nomination-card__title, .flex-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1928,12 +1928,20 @@ picture {
 }
 
 .nomination-card {
+  background-color: var(--primary);
   background-image: url("../assets/images/nomination-card-bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
   padding: clamp(8px, 2.2vw, 20px);
   height: 100%;
+}
+.nomination-card ul li {
+  padding: 3px 0;
+}
+.nomination-card li ul {
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 .nomination-card__header-top {
   gap: 30px;
@@ -1960,6 +1968,10 @@ picture {
   transition: transform var(--base-transition), -webkit-transform var(--base-transition);
 }
 .nomination-card__title {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4px 0;
   font-size: clamp(14px, 2vw, 24px);
   font-weight: 700;
   text-transform: uppercase;
@@ -1968,6 +1980,13 @@ picture {
 }
 .nomination-card__title strong {
   color: var(--secondary);
+}
+.nomination-card__title img {
+  max-width: 140px;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  margin-top: -4px;
 }
 .nomination-card__text {
   color: var(--white);
@@ -2242,6 +2261,7 @@ picture {
 
 .features {
   color: var(--white);
+  background-color: var(--primary);
   background-image: url("../assets/images/section-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -2568,6 +2588,7 @@ picture {
   gap: 20px;
   padding: 30px;
   color: var(--white);
+  background-color: var(-primary);
   background-image: url("../assets/images/section-bg.png");
   background-size: cover;
   background-repeat: no-repeat;

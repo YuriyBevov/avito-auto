@@ -1,10 +1,22 @@
 .nomination-card {
+  background-color: var(--primary);
   background-image: url("../assets/images/nomination-card-bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
   padding: clamp(8px, 2.2vw,20px);
   height: 100%;
+
+
+
+  ul li {
+    padding: 3px 0;
+  }
+
+  li ul {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
 
   &__header {
     &-top {
@@ -36,6 +48,9 @@
   }
 
   &__title {
+    @extend %flex-wrap;
+    align-items: center;
+    gap: 4px 0;
     font-size: clamp(14px, 2vw, 24px);
     font-weight: 700;
     text-transform: uppercase;
@@ -43,6 +58,13 @@
     word-break: break-word;
     strong {
       color: var(--secondary);
+    }
+
+    img {
+      max-width: 140px;
+      height: auto;
+      object-fit: contain;
+      margin-top: -4px;
     }
   }
 
