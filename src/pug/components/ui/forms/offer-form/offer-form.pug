@@ -1,0 +1,33 @@
+include ../../main-input/main-input
+.offer-form
+  form(action="#" method="POST")
+    span.base-title Подать заявку на участие
+
+    +main-input({
+      label: 'ФИО*',
+      id: 'user_name',
+      required: true
+    })
+    +main-input({
+      label: 'ДЦ',
+      id: 'user_dc',
+    })
+    +main-input({
+      label: 'Должность',
+      id: 'user_position',
+    })
+    +main-input({
+      label: 'Телефон*',
+      id: 'user_phone',
+      type: 'tel',
+      required: true
+    })
+    +main-input({
+      label: 'E-mail*',
+      id: 'user_mail',
+      required: true
+    })
+
+    small.offer-form__note *Очное посещение мероприятия возможно только по приглашению персонального менеджера Авито или сотрудников Автостат.
+
+    input(type="submit" value="Подать заявку на участие").main-btn

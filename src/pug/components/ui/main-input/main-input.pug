@@ -1,0 +1,4 @@
+mixin main-input(data)
+  .main-input
+    label(for= data.id)!= data.label
+    input(type="text" data-type= data.type == "tel" ? "phone" : null id= data.id required= data.required ? 'required' : null)

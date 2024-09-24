@@ -1,0 +1,16 @@
+.main-input {
+  @extend %flex-column;
+  gap: 8px;
+
+  label {
+    font-weight: 500;
+    font-size: clamp(18px, 3vw, 24px);
+    color: #99a2ab;
+  }
+
+  input {
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+    padding: 14px 20px 10px;
+  }
+}

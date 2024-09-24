@@ -1,2 +1,2 @@
 mixin main-btn(data)
-  button.main-btn(class = data.cls ? data.cls : null)!= data.text
+  button.main-btn(class = data.cls ? data.cls : null data-modal-opener= data.modal ? data.modal : null)!= data.text

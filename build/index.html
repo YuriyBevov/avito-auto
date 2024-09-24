@@ -33,26 +33,6 @@
     </script>
   </head>
   <body>
-    <div class="loader">
-      <div class="lds-roller">
-        <div>
-        </div>
-        <div>
-        </div>
-        <div>
-        </div>
-        <div>
-        </div>
-        <div>
-        </div>
-        <div>
-        </div>
-        <div>
-        </div>
-        <div>
-        </div>
-      </div>
-    </div>
     <header class="header">
       <div class="container header__container">
         <a
@@ -142,7 +122,10 @@
                 Москва, VK Stadium
               </span>
             </div>
-            <button class="main-btn">
+            <button
+              class="main-btn"
+              data-modal-opener="offer-modal"
+            >
               Регистрация на онлайн-трансляцию премии
             </button>
           </div>
@@ -3498,6 +3481,34 @@
     </footer>
     <div class="modal-overlay">
       <div
+        class="modal main-modal success-modal"
+        id="success-modal"
+      >
+        <button
+          class="modal-closer"
+          type="button"
+          aria-label="Закрыть"
+        >
+          <svg
+            width="20"
+            height="20"
+          >
+            <use xlink:href="./assets/sprite.svg#icon-close">
+            </use>
+          </svg>
+        </button>
+        <div class="modal-content">
+          <span class="base-title">
+            Спасибо !
+          </span>
+          <span class="base-subtitle">
+            Мы свяжемся в вами в ближайшее время!
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="modal-overlay">
+      <div
         class="modal main-modal review-modal"
         id="review-modal"
       >
@@ -3564,6 +3575,103 @@
         </button>
         <div class="modal-content">
           <div class="history-content">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-overlay">
+      <div
+        class="modal main-modal offer-modal"
+        id="offer-modal"
+      >
+        <button
+          class="modal-closer"
+          type="button"
+          aria-label="Закрыть"
+        >
+          <svg
+            width="20"
+            height="20"
+          >
+            <use xlink:href="./assets/sprite.svg#icon-close">
+            </use>
+          </svg>
+        </button>
+        <div class="modal-content">
+          <div class="offer-content">
+            <img
+              src="./assets/images/offer-form-img.png"
+              alt="Автодилер"
+              width="600"
+              height="320"
+            >
+            <div class="offer-form">
+              <form
+                action="#"
+                method="POST"
+              >
+                <span class="base-title">
+                  Подать заявку на участие
+                </span>
+                <div class="main-input">
+                  <label for="user_name">
+                    ФИО*
+                  </label>
+                  <input
+                    type="text"
+                    id="user_name"
+                    required="required"
+                  >
+                </div>
+                <div class="main-input">
+                  <label for="user_dc">
+                    ДЦ
+                  </label>
+                  <input
+                    type="text"
+                    id="user_dc"
+                  >
+                </div>
+                <div class="main-input">
+                  <label for="user_position">
+                    Должность
+                  </label>
+                  <input
+                    type="text"
+                    id="user_position"
+                  >
+                </div>
+                <div class="main-input">
+                  <label for="user_phone">
+                    Телефон*
+                  </label>
+                  <input
+                    type="text"
+                    data-type="phone"
+                    id="user_phone"
+                    required="required"
+                  >
+                </div>
+                <div class="main-input">
+                  <label for="user_mail">
+                    E-mail*
+                  </label>
+                  <input
+                    type="text"
+                    id="user_mail"
+                    required="required"
+                  >
+                </div>
+                <small class="offer-form__note">
+                  *Очное посещение мероприятия возможно только по приглашению персонального менеджера Авито или сотрудников Автостат.
+                </small>
+                <input
+                  class="main-btn"
+                  type="submit"
+                  value="Подать заявку на участие"
+                >
+              </form>
+            </div>
           </div>
         </div>
       </div>

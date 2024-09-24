@@ -1533,7 +1533,7 @@ p {
   align-items: center;
 }
 
-.footer__section-side, .subscribe__grid-item, .organization__card, .history__bottom-content, .history__content, .honor__list, .hero__place, .hero__title, .hero__content, .history-card__content-text, .history-card__content, .history-card__header, .review-card__content, .review-card, .staff-card__footer, .staff-card__content, .main-accordeon {
+.footer__section-side, .subscribe__grid-item, .organization__card, .history__bottom-content, .history__content, .honor__list, .hero__place, .hero__title, .hero__content, .offer-form form, .offer-form, .history-card__content-text, .history-card__content, .history-card__header, .review-card__content, .review-card, .staff-card__footer, .staff-card__content, .main-input, .main-accordeon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1794,6 +1794,20 @@ picture {
   background-color: var(--primary);
   color: var(--white);
   cursor: pointer;
+}
+
+.main-input {
+  gap: 8px;
+}
+.main-input label {
+  font-weight: 500;
+  font-size: clamp(18px, 3vw, 24px);
+  color: #99a2ab;
+}
+.main-input input {
+  border-radius: 10px;
+  border: 2px solid var(--primary);
+  padding: 14px 20px 10px;
 }
 
 .staff-card__header img {
@@ -2087,6 +2101,26 @@ picture {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.offer-form {
+  padding: clamp(24px, 4vw, 50px);
+}
+.offer-form .base-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.offer-form input[type=submit],
+.offer-form button[type=submit] {
+  width: 100%;
+}
+.offer-form form {
+  gap: 20px;
+}
+.offer-form__note {
+  display: inline-block;
+  font-size: clamp(14px, 2vw, 18px);
+  margin-bottom: 20px;
 }
 
 .header {
@@ -2737,19 +2771,22 @@ picture {
   padding: 30px;
   padding-left: 0;
 }
-.modal:has(.history-card) {
+.modal:has(.history-card), .modal:has(.offer-form) {
   max-width: 1000px;
   padding: 0;
 }
-.modal:has(.history-card) .modal-closer {
+.modal:has(.history-card) .modal-closer, .modal:has(.offer-form) .modal-closer {
   position: sticky;
   top: 10px;
   margin: -30px 0;
   right: 0;
   left: calc(100% - 50px);
 }
-.modal:has(.history-card) .modal-content {
+.modal:has(.history-card) .modal-content, .modal:has(.offer-form) .modal-content {
   margin-top: 20px;
+}
+.modal:has(.offer-form) {
+  max-width: 600px;
 }
 .modal-content {
   background-color: var(--white);
@@ -2759,7 +2796,7 @@ picture {
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.modal-content:has(.history-card) {
+.modal-content:has(.history-card), .modal-content:has(.offer-form) {
   padding: 0;
   border: none;
   border-radius: 0;
@@ -2793,17 +2830,4 @@ picture {
 }
 .modal-closer:active {
   opacity: 1;
-}
-.modal-title {
-  display: inline-block;
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-l);
-  width: 100%;
-  padding-right: 20px;
-  color: var(--white);
-  margin-bottom: var(--gap-l);
-  text-wrap: initial;
-}
-.modal-text {
-  font-size: 14px;
 }

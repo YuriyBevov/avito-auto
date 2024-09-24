@@ -8,7 +8,7 @@ html(lang="ru")
   +main-head(title, description, keywords, styleFileNames)
 
   body
-    include ../components/loader/loader
+    //- include ../components/loader/loader
     include ../components/header/header
 
     main
@@ -18,10 +18,11 @@ html(lang="ru")
 
     //- Модальные окна используемые на ВСЕХ страницах сайта
 
-    //- include ../modals/success-modal
+    include ../modals/success-modal
     include ../modals/review-modal
     include ../modals/winners-modal
     include ../modals/history-modal
+    include ../modals/offer-modal
 
     block modals
 

@@ -1,0 +1,10 @@
+extends ../layouts/modals/main-modal
+
+block variables
+  - modalId = "offer-modal"
+  - modalClasses = "offer-modal"
+
+block modalContent
+  .offer-content
+    img(src="./assets/images/offer-form-img.png" alt="Автодилер" width="600" height="320")
+    include ../components/ui/forms/offer-form/offer-form
