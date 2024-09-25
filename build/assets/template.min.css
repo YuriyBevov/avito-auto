@@ -1844,6 +1844,40 @@ picture {
   color: #99a2ab;
 }
 
+.main-checkbox {
+  width: 100%;
+}
+.main-checkbox a {
+  color: var(--white);
+  text-decoration: underline;
+}
+.main-checkbox input[type=checkbox] {
+  display: none;
+}
+.main-checkbox label {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.main-checkbox label::before {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--white);
+  border-radius: 3px;
+  margin-right: 10px;
+}
+.main-checkbox label:has(input[type=checkbox]:checked)::before {
+  background-image: url("../assets/images/icon-check.svg");
+  background-repeat: no-repeat;
+  background-size: 16px 12px;
+  background-position: center;
+}
+
 .staff-card__header img {
   display: block;
   width: 100%;

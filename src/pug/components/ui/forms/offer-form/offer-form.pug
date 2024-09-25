@@ -1,4 +1,7 @@
 include ../../main-input/main-input
+//- include ../../main-сheckbox/main-checkbox
+include ../../main-checkbox/main-checkbox
+
 .offer-form
   form(action="#" method="POST")
     span.base-title Регистрация
@@ -30,7 +33,12 @@ include ../../main-input/main-input
         required: true
       })
 
-    span.policy Отправляя заявку, вы соглашаетесь с&nbsp;<a href="https://www.avito.ru/safety/personal/company" target="_blank">политикой конфиденциальности</a>
+    +main-checkbox({
+      label: 'Отправляя заявку, вы соглашаетесь с&nbsp;<a href="https://www.avito.ru/safety/personal/company" target="_blank">политикой конфиденциальности</a>',
+      id: 'user-policy'
+    })
+
+    //- span.policy Отправляя заявку, вы соглашаетесь с&nbsp;<a href="https://www.avito.ru/safety/personal/company" target="_blank">политикой конфиденциальности</a>
     small.offer-form__note *Очное посещение мероприятия возможно только по приглашению персонального менеджера Авито или сотрудников Автостат.
 
     input(type="submit" value="Регистрация на онлайн-трансляцию премии").main-btn
