@@ -2040,6 +2040,9 @@ picture {
   -o-object-position: left;
   object-position: left;
 }
+.nomination-card__header-top img.avito-logo {
+  max-height: 25px;
+}
 .nomination-card__header button {
   width: 40px;
   height: 40px;

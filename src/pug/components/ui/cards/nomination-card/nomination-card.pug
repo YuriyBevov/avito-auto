@@ -3,7 +3,7 @@ mixin nomination-card(data)
   .nomination-card
     .nomination-card__header
       .nomination-card__header-top
-        img(src=`./assets/images/${data.logo}` alt="logo" width="160" height="40")
+        img(src=`./assets/images/${data.logo}` alt="logo" width="160" height="32" class= data.cls ? data.cls : null)
         button(type="button" aria-label="Развернуть").nomination-card-expander
       .nomination-card__header-bottom
         span.nomination-card__title

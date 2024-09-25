@@ -30,6 +30,10 @@
         max-height: 32px;
         object-fit: contain;
         object-position: left;
+
+        &.avito-logo {
+          max-height: 25px;
+        }
       }
     }
 
