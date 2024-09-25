@@ -2,7 +2,6 @@ mixin history-card(data)
   .history-card
     if data.header
       .history-card__header
-        img(src=`./assets/images/${data.header.img}` alt!= data.header.title width="1000" height="600")
         span.base-title.history-card__header-title!= data.header.title
     .history-card__content
       each content in data.content
@@ -11,5 +10,7 @@ mixin history-card(data)
           if block.title
             span.history-card__content-subtitle!= block.title
           .history-card__content-text!= block.content
+      if data.header
+        img(src=`./assets/images/${data.header.img}` alt!= data.header.title width="1000" height="600")
     //- .history-card__footer
       a(href="#" target="_blank" rel="noopener nofollow norefferer").main-btn Читать подробности на сайте
