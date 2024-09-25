@@ -2158,6 +2158,7 @@ picture {
   text-wrap: initial;
   padding: 14px 20px 10px;
   text-transform: uppercase;
+  min-height: 80px;
 }
 .offer-form form {
   gap: 20px;
