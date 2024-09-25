@@ -1,33 +1,36 @@
 include ../../main-input/main-input
 .offer-form
   form(action="#" method="POST")
-    span.base-title Подать заявку на участие
+    span.base-title Регистрация
 
     +main-input({
-      label: 'ФИО*',
+      placeholder: 'ФИО*',
       id: 'user_name',
       required: true
     })
-    +main-input({
-      label: 'ДЦ',
-      id: 'user_dc',
-    })
-    +main-input({
-      label: 'Должность',
-      id: 'user_position',
-    })
-    +main-input({
-      label: 'Телефон*',
-      id: 'user_phone',
-      type: 'tel',
-      required: true
-    })
-    +main-input({
-      label: 'E-mail*',
-      id: 'user_mail',
-      required: true
-    })
+    fieldset
+      +main-input({
+        placeholder: 'ДЦ',
+        id: 'user_dc',
+      })
+      +main-input({
+        placeholder: 'Должность',
+        id: 'user_position',
+      })
+    fieldset
+      +main-input({
+        placeholder: 'Телефон*',
+        id: 'user_phone',
+        type: 'tel',
+        required: true
+      })
+      +main-input({
+        placeholder: 'E-mail*',
+        id: 'user_mail',
+        required: true
+      })
 
+    span.policy Отправляя заявку, вы соглашаетесь с&nbsp;<a href="https://www.avito.ru/safety/personal/company" target="_blank">политикой конфиденциальности</a>
     small.offer-form__note *Очное посещение мероприятия возможно только по приглашению персонального менеджера Авито или сотрудников Автостат.
 
-    input(type="submit" value="Подать заявку на участие").main-btn
+    input(type="submit" value="Регистрация на онлайн-трансляцию премии").main-btn

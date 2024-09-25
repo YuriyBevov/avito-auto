@@ -92,42 +92,110 @@
       <section class="hero">
         <div class="container hero__container">
           <div class="hero__content">
-            <div class="hero__tags">
-              <span class="hero__tag">
-                Новый формат
-              </span>
-              <span class="hero__tag">
-                Новые номинации
-              </span>
-              <span class="hero__tag">
-                Новые лидеры
-              </span>
+            <div class="hero__content-item">
+              <div class="hero__tags">
+                <span class="hero__tag">
+                  Новый формат
+                </span>
+                <span class="hero__tag">
+                  Новые номинации
+                </span>
+                <span class="hero__tag">
+                  Новые лидеры
+                </span>
+              </div>
+              <h1 class="hero__title">
+                <span>
+                  “АВТОДИЛЕР ГОДА -  2024”
+                </span>
+                <span>
+                  Новые вершины
+                </span>
+              </h1>
+              <p class="hero__text">
+                Легендарная отраслевая премия возвращается!
+              </p>
+              <div class="hero__place">
+                <span>
+                  8 октября 2024 18:00
+                </span>
+                <span>
+                  Москва, VK Stadium
+                </span>
+              </div>
             </div>
-            <h1 class="hero__title">
-              <span>
-                “АВТОДИЛЕР ГОДА -  2024”
-              </span>
-              <span>
-                Новые вершины
-              </span>
-            </h1>
-            <p class="hero__text">
-              Легендарная отраслевая премия возвращается!
-            </p>
-            <div class="hero__place">
-              <span>
-                8 октября 2024 18:00
-              </span>
-              <span>
-                Москва, VK Stadium
-              </span>
+            <div class="hero__content-item">
+              <div class="offer-form">
+                <form
+                  action="#"
+                  method="POST"
+                >
+                  <span class="base-title">
+                    Регистрация
+                  </span>
+                  <div class="main-input">
+                    <input
+                      type="text"
+                      placeholder="ФИО*"
+                      id="user_name"
+                      required="required"
+                    >
+                  </div>
+                  <fieldset>
+                    <div class="main-input">
+                      <input
+                        type="text"
+                        placeholder="ДЦ"
+                        id="user_dc"
+                      >
+                    </div>
+                    <div class="main-input">
+                      <input
+                        type="text"
+                        placeholder="Должность"
+                        id="user_position"
+                      >
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <div class="main-input">
+                      <input
+                        type="text"
+                        placeholder="Телефон*"
+                        data-type="phone"
+                        id="user_phone"
+                        required="required"
+                      >
+                    </div>
+                    <div class="main-input">
+                      <input
+                        type="text"
+                        placeholder="E-mail*"
+                        id="user_mail"
+                        required="required"
+                      >
+                    </div>
+                  </fieldset>
+                  <span class="policy">
+                    Отправляя заявку, вы соглашаетесь с&nbsp;
+                    <a
+                      href="https://www.avito.ru/safety/personal/company"
+                      target="_blank"
+                    >
+                      политикой конфиденциальности
+                    </a>
+                  </span>
+                  <small class="offer-form__note">
+                    *Очное посещение мероприятия возможно только по приглашению персонального менеджера Авито или сотрудников Автостат.
+                  </small>
+                  <input
+                    class="main-btn"
+                    type="submit"
+                    value="Регистрация на онлайн-трансляцию премии"
+                  >
+                </form>
+              </div>
             </div>
-            <button
-              class="main-btn"
-              data-modal-opener="offer-modal"
-            >
-              Регистрация на онлайн-трансляцию премии
-            </button>
           </div>
         </div>
       </section>
@@ -3667,64 +3735,67 @@
                 method="POST"
               >
                 <span class="base-title">
-                  Подать заявку на участие
+                  Регистрация
                 </span>
                 <div class="main-input">
-                  <label for="user_name">
-                    ФИО*
-                  </label>
                   <input
                     type="text"
+                    placeholder="ФИО*"
                     id="user_name"
                     required="required"
                   >
                 </div>
-                <div class="main-input">
-                  <label for="user_dc">
-                    ДЦ
-                  </label>
-                  <input
-                    type="text"
-                    id="user_dc"
+                <fieldset>
+                  <div class="main-input">
+                    <input
+                      type="text"
+                      placeholder="ДЦ"
+                      id="user_dc"
+                    >
+                  </div>
+                  <div class="main-input">
+                    <input
+                      type="text"
+                      placeholder="Должность"
+                      id="user_position"
+                    >
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <div class="main-input">
+                    <input
+                      type="text"
+                      placeholder="Телефон*"
+                      data-type="phone"
+                      id="user_phone"
+                      required="required"
+                    >
+                  </div>
+                  <div class="main-input">
+                    <input
+                      type="text"
+                      placeholder="E-mail*"
+                      id="user_mail"
+                      required="required"
+                    >
+                  </div>
+                </fieldset>
+                <span class="policy">
+                  Отправляя заявку, вы соглашаетесь с&nbsp;
+                  <a
+                    href="https://www.avito.ru/safety/personal/company"
+                    target="_blank"
                   >
-                </div>
-                <div class="main-input">
-                  <label for="user_position">
-                    Должность
-                  </label>
-                  <input
-                    type="text"
-                    id="user_position"
-                  >
-                </div>
-                <div class="main-input">
-                  <label for="user_phone">
-                    Телефон*
-                  </label>
-                  <input
-                    type="text"
-                    data-type="phone"
-                    id="user_phone"
-                    required="required"
-                  >
-                </div>
-                <div class="main-input">
-                  <label for="user_mail">
-                    E-mail*
-                  </label>
-                  <input
-                    type="text"
-                    id="user_mail"
-                    required="required"
-                  >
-                </div>
+                    политикой конфиденциальности
+                  </a>
+                </span>
                 <small class="offer-form__note">
                   *Очное посещение мероприятия возможно только по приглашению персонального менеджера Авито или сотрудников Автостат.
                 </small>
                 <input
                   class="main-btn"
                   type="submit"
-                  value="Подать заявку на участие"
+                  value="Регистрация на онлайн-трансляцию премии"
                 >
               </form>
             </div>

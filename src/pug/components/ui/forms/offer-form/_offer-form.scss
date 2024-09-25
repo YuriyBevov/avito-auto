@@ -1,6 +1,9 @@
 .offer-form {
   @extend %flex-column;
-  padding: clamp(24px, 4vw, 50px);
+  padding: 40px clamp(24px, 4vw, 50px);
+  background-color: var(--primary);
+  border-radius: 20px;
+  color: var(--white);
 
   .base-title {
     text-align: center;
@@ -10,7 +13,11 @@
   input[type="submit"],
   button[type="submit"] {
     width: 100%;
-    text-wrap: balance;
+    background-color: var(--white);
+    color: var(--primary);
+    text-wrap: initial;
+    padding: 14px 20px 10px;
+    text-transform: uppercase;
   }
 
   form {
@@ -18,9 +25,25 @@
     gap: 20px;
   }
 
+  fieldset {
+    @extend %fieldset-reset;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+
+    @media(max-width: 534px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
   &__note {
     display: inline-block;
     font-size: clamp(14px, 2vw, 18px);
     margin-bottom: 20px;
+  }
+
+  .policy a {
+    color: var(--white);
+    text-decoration: underline;
   }
 }

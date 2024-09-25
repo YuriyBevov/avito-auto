@@ -1,4 +1,5 @@
 mixin main-input(data)
   .main-input
-    label(for= data.id)!= data.label
-    input(type="text" data-type= data.type == "tel" ? "phone" : null id= data.id required= data.required ? 'required' : null)
+    if data.label
+      label(for= data.id)!= data.label
+    input(type="text" placeholder= data.placeholder ? data.placeholder : null data-type= data.type == "tel" ? "phone" : null id= data.id required= data.required ? 'required' : null)
