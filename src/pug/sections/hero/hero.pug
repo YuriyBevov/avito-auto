@@ -3,10 +3,10 @@ section.hero
   .container.hero__container
     .hero__content
       .hero__content-item
-        .hero__tags
-          span.hero__tag Новый формат
-          span.hero__tag Новые номинации
-          span.hero__tag Новые лидеры
+        //- .hero__tags
+        //-   span.hero__tag Новый формат
+        //-   span.hero__tag Новые номинации
+        //-   span.hero__tag Новые лидеры
 
         h1.hero__title
           span “АВТОДИЛЕР ГОДА -  2024”
@@ -14,14 +14,14 @@ section.hero
 
         p.hero__text Легендарная отраслевая премия возвращается!
 
-        .hero__place
-          span 8 октября 2024 18:00
-          span Москва, VK Stadium
+        //- .hero__place
+        //-   span 8 октября 2024 18:00
+        //-   span Москва, VK Stadium
 
-        //- +main-btn({
-        //-   text: 'Регистрация на онлайн-трансляцию премии',
-        //-   modal: 'offer-modal'
-        //- })
-      .hero__content-item
-        include ../../components/ui/forms/offer-form/offer-form
+        .hero__btn-group
+          a.main-btn(href="#winners-new") Смотреть результаты
+          a.main-btn.main-btn--outlined(href="#translation") Смотреть трансляцию
+
+      //- .hero__content-item
+      //-   include ../../components/ui/forms/offer-form/offer-form
 

@@ -15,7 +15,9 @@
       p {
         font-size: 24px;
       }
+
       &:last-child {
+        margin-right: calc(-1 * var(--container-offset));
         @media(max-width: $laptop-width) {
           display: none;
         }

@@ -4,10 +4,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  padding: clamp(8px, 2.2vw,20px);
+  padding: clamp(8px, 3.2vw,40px);
   height: 100%;
-
-
 
   ul li {
     padding: 3px 0;
@@ -23,7 +21,7 @@
       @extend %flex-align;
       gap: 30px;
       justify-content: space-between;
-      margin-bottom: 20px;
+      // margin-bottom: 20px;
 
       img {
         max-width: 160px;
@@ -62,6 +60,7 @@
     text-transform: uppercase;
     color: var(--white);
     word-break: break-word;
+    margin-top: 4px;
     strong {
       color: var(--secondary);
     }
@@ -89,6 +88,11 @@
 
     .badge {
       margin-bottom: 20px;
+    }
+
+    a {
+      text-decoration: underline;
+      color: var(--white);
     }
   }
 

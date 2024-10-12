@@ -1,0 +1,37 @@
+.winners-new {
+  background-image: url('../assets/images/sec-bg.png');
+  background-size: cover;
+  background-position: center;
+
+  .base-title {
+    color: var(--white);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+
+    @media (max-width: 960px) {
+      grid-template-columns: 1fr;
+    }
+
+    &-item {
+      background-color: var(--white);
+
+      .history-card__content-title {
+        @extend %flex-column;
+        gap: 16px;
+        align-items: flex-start;
+        padding: 0;
+
+        &::before {
+          position: static;
+          top: 0;
+          transform: none;
+        }
+      }
+    }
+  }
+}

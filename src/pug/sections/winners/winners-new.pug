@@ -1,0 +1,136 @@
+extends ../../layouts/base-section/base-section
+
+block variables
+  -
+    sectionTitle = "Результаты премии «Автодилер года 2024»"
+    sectionDesc = '';
+    sectionCls = 'winners-new';
+    sectionID = 'winners-new';
+    sectionCollapsed = false;
+
+block content
+  include ../../components/ui/cards/history-card/history-card
+
+  .winners-new__grid
+    .winners-new__grid-item
+      +history-card({
+        content: [
+          {
+            title: 'Номинация «ЛУЧШИЙ КЛИЕНТСКИЙ ОПЫТ»',
+            blocks: [
+              {
+                title: 'БРЕНДЫ - ПРЕМИАЛЬНЫЙ СЕГМЕНТ',
+                content: `
+                  VOLVO
+                `
+              },
+              {
+                title: 'БРЕНДЫ - МАССОВЫЙ СЕГМЕНТ',
+                content: `
+                  SUBARU
+                `
+              },
+              {
+                title: 'ОФИЦИАЛЬНЫЙ ДИЛЕР - НОВЫЕ АВТОМОБИЛИ',
+                content: `
+                  АРТАН Официальный дилер Volkswagen в Нижнем Новгороде
+                `
+              },
+              {
+                title: 'ОФИЦИАЛЬНЫЙ ДИЛЕР - АВТОМОБИЛИ С ПРОБЕГОМ',
+                content: `
+                  KIA Центр Зубово
+                `
+              },
+              {
+                title: 'НЕЗАВИСИМЫЙ ДИЛЕР АВТОМОБИЛИ С ПРОБЕГОМ',
+                content: `
+                  ПРОХОР
+                `
+              },
+            ]
+          }
+        ]
+      })
+    .winners-new__grid-item
+      +history-card({
+        content: [
+          {
+            title: 'Номинация «ЛУЧШИЙ КЛИЕНТСКИЙ ОПЫТ»',
+            blocks: [
+              {
+                title: 'БРЕНДЫ - ПРЕМИАЛЬНЫЙ СЕГМЕНТ',
+                content: `
+                  VOLVO
+                `
+              },
+              {
+                title: 'БРЕНДЫ - МАССОВЫЙ СЕГМЕНТ',
+                content: `
+                  SUBARU
+                `
+              },
+              {
+                title: 'ОФИЦИАЛЬНЫЙ ДИЛЕР - НОВЫЕ АВТОМОБИЛИ',
+                content: `
+                  АРТАН Официальный дилер Volkswagen в Нижнем Новгороде
+                `
+              },
+              {
+                title: 'ОФИЦИАЛЬНЫЙ ДИЛЕР - АВТОМОБИЛИ С ПРОБЕГОМ',
+                content: `
+                  KIA Центр Зубово
+                `
+              },
+              {
+                title: 'НЕЗАВИСИМЫЙ ДИЛЕР АВТОМОБИЛИ С ПРОБЕГОМ',
+                content: `
+                  ПРОХОР
+                `
+              },
+            ]
+          }
+        ]
+      })
+    .winners-new__grid-item
+      +history-card({
+        content: [
+          {
+            title: 'Номинация «ЛУЧШИЙ КЛИЕНТСКИЙ ОПЫТ»',
+            blocks: [
+              {
+                title: 'БРЕНДЫ - ПРЕМИАЛЬНЫЙ СЕГМЕНТ',
+                content: `
+                  VOLVO
+                `
+              },
+              {
+                title: 'БРЕНДЫ - МАССОВЫЙ СЕГМЕНТ',
+                content: `
+                  SUBARU
+                `
+              },
+              {
+                title: 'ОФИЦИАЛЬНЫЙ ДИЛЕР - НОВЫЕ АВТОМОБИЛИ',
+                content: `
+                  АРТАН Официальный дилер Volkswagen в Нижнем Новгороде
+                `
+              },
+              {
+                title: 'ОФИЦИАЛЬНЫЙ ДИЛЕР - АВТОМОБИЛИ С ПРОБЕГОМ',
+                content: `
+                  KIA Центр Зубово
+                `
+              },
+              {
+                title: 'НЕЗАВИСИМЫЙ ДИЛЕР АВТОМОБИЛИ С ПРОБЕГОМ',
+                content: `
+                  ПРОХОР
+                `
+              },
+            ]
+          }
+        ]
+      })
+
+

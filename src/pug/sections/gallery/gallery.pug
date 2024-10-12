@@ -1,0 +1,29 @@
+extends ../../layouts/base-section/base-section
+
+block variables
+  -
+    sectionTitle = "Фотогалерея"
+    sectionDesc = '';
+    sectionCls = 'gallery';
+    sectionID = 'gallery';
+    sectionCollapsed = false;
+
+block content
+  .swiper.gallery-slider
+    .swiper-wrapper
+      .swiper-slide
+        img(src="./assets/images/winner-1.png" alt="Победители" width="1680" height="720")
+      .swiper-slide
+        img(src="./assets/images/winner-2.png" alt="Победители" width="1680" height="720")
+      .swiper-slide
+        img(src="./assets/images/winner-3.png" alt="Победители" width="1680" height="720")
+      .swiper-slide
+        img(src="./assets/images/winner-4.png" alt="Победители" width="1680" height="720")
+      .swiper-slide
+        img(src="./assets/images/winner-5.png" alt="Победители" width="1680" height="720")
+      .swiper-slide
+        img(src="./assets/images/winner-6.png" alt="Победители" width="1680" height="720")
+
+    .swiper-pagination
+    .swiper-button-prev
+    .swiper-button-next

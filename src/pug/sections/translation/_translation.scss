@@ -1,0 +1,14 @@
+.translation {
+  background-image: url('../assets/images/sec-bg.png');
+  background-size: cover;
+  background-position: center;
+
+  .base-title {
+    color: var(--white);
+  }
+
+  .video-block {
+    background-color: var(--white);
+    min-height: 100px;
+  }
+}
