@@ -11,6 +11,7 @@ if (slider) {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
+      dynamicBullets: true,
     },
     navigation: {
       nextEl: slider.querySelector('.swiper-button-next'),
