@@ -4,13 +4,26 @@
 
   &__logo {
     max-width: 300px;
+    margin-right: auto;
   }
 
   &__section {
     @extend %flex-align;
-    justify-content: space-between;
+    // justify-content: space-between;
     gap: 20px 60px;
     flex-wrap: wrap;
+
+    .partner-logo {
+      span {
+        font-size: clamp(14px, 2vw, 24px);
+        font-weight: 700;
+        color: var(--white);
+      }
+
+      img {
+        max-width: 190px;
+      }
+    }
 
     &:first-child {
       padding-bottom: 40px;

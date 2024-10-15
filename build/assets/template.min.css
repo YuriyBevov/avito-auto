@@ -2971,14 +2971,20 @@ picture {
 }
 .footer__logo {
   max-width: 300px;
+  margin-right: auto;
 }
 .footer__section {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   gap: 20px 60px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+.footer__section .partner-logo span {
+  font-size: clamp(14px, 2vw, 24px);
+  font-weight: 700;
+  color: var(--white);
+}
+.footer__section .partner-logo img {
+  max-width: 190px;
 }
 .footer__section:first-child {
   padding-bottom: 40px;
